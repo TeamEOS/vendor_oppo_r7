@@ -27,6 +27,9 @@ LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 include $(BUILD_PREBUILT)
 
+# Link acdbloader at build time
+$(shell cp -f $(LOCAL_PATH)/proprietary/vendor/lib/libacdbloader.so $(TARGET_OUT)/../obj/lib/)
+
 # Create target dirs if needed
 $(shell mkdir -p $(TARGET_OUT)/bin)
 $(shell mkdir -p $(TARGET_OUT)/etc/firmware)
