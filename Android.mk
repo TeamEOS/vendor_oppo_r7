@@ -30,21 +30,7 @@ include $(BUILD_PREBUILT)
 # Link acdbloader at build time
 $(shell cp -f $(LOCAL_PATH)/proprietary/vendor/lib/libacdbloader.so $(TARGET_OUT)/../obj/lib/)
 
-# Create target dirs if needed
-$(shell mkdir -p $(TARGET_OUT)/bin)
-$(shell mkdir -p $(TARGET_OUT)/etc/firmware)
-$(shell mkdir -p $(TARGET_OUT)/lib/egl)
-$(shell mkdir -p $(TARGET_OUT)/lib/hw)
-$(shell mkdir -p $(TARGET_OUT)/vendor/lib/egl)
-
-# Copy the blobs
-$(shell cp -Rf $(LOCAL_PATH)/proprietary/bin $(TARGET_OUT)/bin/)
-$(shell cp -Rf $(LOCAL_PATH)/proprietary/etc/firmware $(TARGET_OUT)/etc/firmware/)
-$(shell cp -Rf $(LOCAL_PATH)/proprietary/lib $(TARGET_OUT)/lib/)
-$(shell cp -Rf $(LOCAL_PATH)/proprietary/lib/egl $(TARGET_OUT)/lib/egl/)
-$(shell cp -Rf $(LOCAL_PATH)/proprietary/lib/hw $(TARGET_OUT)/lib/hw/)
-$(shell cp -Rf $(LOCAL_PATH)/proprietary/vendor/lib $(TARGET_OUT)/vendor/lib/)
-$(shell cp -Rf $(LOCAL_PATH)/proprietary/vendor/lib/egl $(TARGET_OUT)/vendor/lib/egl)
+$(shell cp -Rf $(LOCAL_PATH)/system $(TARGET_OUT)/)
 
 endif
 
