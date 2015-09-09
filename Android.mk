@@ -32,10 +32,6 @@ LOCAL_MULTILIB := both
 LOCAL_PROPRIETARY_MODULE := true
 include $(BUILD_PREBUILT)
 
-# Link acdbloader at build time
-$(shell mkdir $(TARGET_OUT)/../obj/lib/)
-$(shell cp -f $(LOCAL_PATH)/system/vendor/lib/libacdbloader.so $(TARGET_OUT)/../obj/lib/)
-
 $(shell cp -Rf $(LOCAL_PATH)/system/* $(TARGET_OUT)/)
 
 endif
