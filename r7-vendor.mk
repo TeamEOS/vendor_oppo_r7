@@ -16,6 +16,16 @@
 
 # Pick up overlay for features that depend on non-open-source files
 PRODUCT_PACKAGES += \
-    libtime_genoff
+    com.qualcomm.location \
+    qcrilmsgtunnel \
+    shutdownlistener \
+    TimeService \
+    qcnvitems \
+    qcrilhook \
+    libloc_api_v02 \
+    libloc_ds_api \
+    libtime_genoff \
+    libqct_resampler \
+    libmm-abl
 
 $(call inherit-product, vendor/oppo/r7/r7-vendor-blobs.mk)
